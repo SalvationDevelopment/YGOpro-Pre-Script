@@ -47,7 +47,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e4)
 end
 function s.cfilter(c,tp)
-return c:IsPreviousControler(tp) and not c:IsPreviousLocation(LOCATION_SZONE)
+	return c:IsPreviousControler(tp) and not c:IsPreviousLocation(LOCATION_SZONE)
 	and (c:IsPreviousLocation(LOCATION_MZONE) or c:GetOriginalType()&TYPE_MONSTER~=0)
 	and c:IsReason(REASON_EFFECT)
 end
